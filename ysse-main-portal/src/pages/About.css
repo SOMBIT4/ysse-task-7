@@ -1,0 +1,130 @@
+.about-intro {
+  max-width: 760px;
+}
+
+.about-intro p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  margin-top: 14px;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.mv-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--color-primary);
+}
+
+.mv-card.alt {
+  border-left-color: var(--color-primary-dark);
+}
+
+.mv-card h3 {
+  color: var(--color-primary-darker);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.mv-card p {
+  color: var(--color-text-muted);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.activity-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.activity-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.activity-card h3 {
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.activity-card p {
+  color: var(--color-text-muted);
+  font-size: 0.93rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.impact-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.impact-card h3 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.impact-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.about-cta {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-darker));
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-cta-content h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-cta-content p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+}
+
+.about-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .mission-vision-grid,
+  .activities-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,130 @@
+:root {
+  --color-primary: #0a8a4a;
+  --color-primary-light: #1db36c;
+  --color-primary-lighter: #2ee08a;
+  --color-primary-dark: #066237;
+  --color-primary-darker: #04421f;
+  --color-accent: #d6f7e3;
+  --color-bg: #f5fbf7;
+  --color-surface: #ffffff;
+  --color-text: #0d1f17;
+  --color-text-muted: #4a655a;
+  --color-border: #d9ede1;
+  --shadow-sm: 0 2px 8px rgba(6, 98, 55, 0.08);
+  --shadow-md: 0 8px 24px rgba(6, 98, 55, 0.12);
+  --shadow-lg: 0 16px 40px rgba(6, 98, 55, 0.18);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --max-width: 1200px;
+  --font-main: "Segoe UI", "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section-light {
+  background-color: var(--color-surface);
+}
+
+.section-tint {
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-accent) 100%);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-primary-darker);
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin-bottom: 44px;
+}
+
+.text-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--color-primary);
+  background: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell main {
+  flex-grow: 1;
+}
+
+#root {
+  min-height: 100vh;
+}
